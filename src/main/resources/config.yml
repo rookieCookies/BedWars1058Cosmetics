@@ -1,5 +1,15 @@
 # BedWars1058Cosmetics v1.0.0
 
+
+# Messages (Color codes are supported)
+messages:
+  unknown-argument: "&cUnknown argument."
+  no-permission: "&cYou don't have permission."
+  reload: "&bBedWars1058Cosmetics &6has been reloaded."
+  not-enough-arguments: "&cPlease enter a valid argument."
+  invalid-executor: "&cThis command can only be executed by a player."
+
+
 # Gives player cosmetics item on join
 on-join-items:
   # Enabled?
@@ -7,13 +17,19 @@ on-join-items:
   # Name of item (Color codes are supported)
   name: "&6Cosmetics &7(Right click)"
   # Item type (Requires Material name, press F3 + H and hover your mouse on a item for Material name)
-  # Examples : CHEST, COMPASS, NETHER_STAR and ...
-  item: CHEST
+  # Examples : CHEST, COMPASS, NETHER_STAR, DIAMOND and ...
+  item: EMERALD
+  # Durability of item (If you don't know what is Durability, leave this value 0)
+  durability: 0
   # Item slot in hand, from 1 (first item from left) to 9 (last item at end)
   slot: 5
+  # Enchant effect on item? (Maybe some items cannot be enchanted, like Chest or Bed)
+  enchanted: true
   # Lore of item, (Color codes are supported)
   lore:
-    - "&6Right click for cosmetics"
+    - "&6BedWars Cosmetics!"
+    - "&6Right click for a list of Cosmetics"
+
 
 # Cosmetics menu items
 CosmeticsMenu:
@@ -28,48 +44,58 @@ CosmeticsMenu:
       name: "&cClose"
       # Item Material
       item: BARRIER
+      durability: 0
       # Lore of item, (Color codes are supported)
       lore:
         - "&7Click for close this menu"
     back:
       name: "&bBack"
       item: ARROW
+      durability: 0
       lore:
         - "&7Click for back to previous menu"
+    glass:
+      name: ""
+      item: STAINED_GLASS_PANE
+      durability: 15
+      lore:
+        - ""
     bedBreakEffects:
       name: "&bBed Break Effects"
       item: BED
+      durability: 0
+      slot: 21
       lore:
         - "&7Click for open bed break effects menu"
     deathCries:
       name: "&6Death cries"
       item: BLAZE_POWDER
+      durability: 0
+      slot: 23
       lore:
         - "&7Click for open death cries menu"
+
 
 BedBreakEffectsMenu:
   title: "&bBed Break Effects"
   cosmetics:
-    fireworkEffect:
+    TNTEffect:
       enabled: true
-      name: "&bBed Break Effects"
-      item: FIREWORK
+      name: "&cTNT Explosion &bEffect"
+      item: TNT
+      durability: 0
+      slot: 1
       lore:
         - "&7Right click for preview of effect"
 
 DeathCriesMenu:
   title: "&6Death Cries"
   cosmetics:
-    catCry:
+    BatCry:
       enabled: true
-      name: "&bCat Cry"
-      item: BED
+      name: "&8Bat &6Cry"
+      item: SPAWN_EGG
+      durability: 0
+      slot: 1
       lore:
         - "&7Right click for preview of sound"
-
-messages:
-  no-permission: "&cYou don't have permission."
-  not-enough-arguments: "&cPlease enter a valid argument."
-  unknown-argument: "&cUnknown argument."
-  invalid-executor: "&cThis command can only be executed by a player."
-  reload: "&bBedWars1058Cosmetics &6has been reloaded."

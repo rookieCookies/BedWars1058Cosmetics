@@ -12,15 +12,19 @@ public class CosmeticsCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
-        if (args.length == 1) {
+
+        if (args.length == 0) {
             sender.sendMessage(Utils.getColorizedConfig("messages.not-enough-arguments"));
             return false;
         }
+
         switch (args[0]) {
             case "reload":
                 if (sender.hasPermission("bedwars1058cosmetics.reload")) {
                     Main.getInstance().reloadConfig();
                     sender.sendMessage(Utils.getColorizedConfig("messages.reload"));
+                } else {
+                    sender.sendMessage(Utils.getColorizedConfig("messages.no-permission"));
                 }
                 break;
             case "menu":
@@ -35,7 +39,9 @@ public class CosmeticsCommand implements CommandExecutor {
                 sender.sendMessage(Utils.getColorizedConfig("messages.unknown-argument"));
                 break;
         }
+
         return true;
+
     }
 
 }

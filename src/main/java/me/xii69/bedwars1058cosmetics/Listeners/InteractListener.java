@@ -10,8 +10,16 @@ public class InteractListener implements Listener {
 
     @EventHandler
     public void onInteract(PlayerInteractEvent event) {
+
+        if (event.getItem() == null) {
+            return;
+        }
+
         if (event.getItem().equals(Items.menuItem)) {
+            event.setCancelled(true);
             GUI.openMainMenu(event.getPlayer());
         }
+
     }
+
 }

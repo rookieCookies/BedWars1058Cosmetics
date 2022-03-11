@@ -6,34 +6,52 @@ import org.bukkit.inventory.ItemStack;
 
 public class Items {
 
+    // Cosmetics main menu items
     public static ItemStack menuItem = ItemBuilder.createItem(
             Utils.getColorizedConfig("on-join-items.item"),
+            Utils.getInt("on-join-items.durability"),
             Utils.getColorizedConfig("on-join-items.name"),
-            "on-join-items.lore"
+            "on-join-items.lore", Utils.getBoolean("on-join-items.enchanted")
     );
-
     public static ItemStack closeItem = ItemBuilder.createItem(
             Utils.getColorizedConfig("CosmeticsMenu.items.close.item"),
+            Utils.getInt("CosmeticsMenu.items.close.durability"),
             Utils.getColorizedConfig("CosmeticsMenu.items.close.name"),
-            "CosmeticsMenu.items.close.lore"
+            "CosmeticsMenu.items.close.lore", true
     );
-
     public static ItemStack backItem = ItemBuilder.createItem(
             Utils.getColorizedConfig("CosmeticsMenu.items.back.item"),
+            Utils.getInt("CosmeticsMenu.items.back.durability"),
             Utils.getColorizedConfig("CosmeticsMenu.items.back.name"),
-            "CosmeticsMenu.items.back.lore"
+            "CosmeticsMenu.items.back.lore", true
+    );
+    public static ItemStack glassItem = ItemBuilder.createItem(
+            Utils.getColorizedConfig("CosmeticsMenu.items.glass.item"),
+            Utils.getInt("CosmeticsMenu.items.glass.durability"),
+            Utils.getColorizedConfig("CosmeticsMenu.items.glass.name"),
+            "CosmeticsMenu.items.glass.lore", false
     );
 
+    // Cosmetics DeathCries menu items
     public static ItemStack deathCriesItem = ItemBuilder.createItem(
             Utils.getColorizedConfig("CosmeticsMenu.items.deathCries.item"),
+            Utils.getInt("CosmeticsMenu.items.deathCries.durability"),
             Utils.getColorizedConfig("CosmeticsMenu.items.deathCries.name"),
-            "CosmeticsMenu.items.deathCries.lore"
+            "CosmeticsMenu.items.deathCries.lore", false
     );
 
+    // Cosmetics BedBreakEffects menu items
     public static ItemStack bedBreakEffectsItem = ItemBuilder.createItem(
             Utils.getColorizedConfig("CosmeticsMenu.items.bedBreakEffects.item"),
+            Utils.getInt("CosmeticsMenu.items.bedBreakEffects.durability"),
             Utils.getColorizedConfig("CosmeticsMenu.items.bedBreakEffects.name"),
-            "CosmeticsMenu.items.bedBreakEffects.lore"
+            "CosmeticsMenu.items.bedBreakEffects.lore", false
+    );
+    public static ItemStack TNTBedEffectsItem = ItemBuilder.createItem(
+            Utils.getColorizedConfig("BedBreakEffectsMenu.cosmetics.TNTEffect.item"),
+            Utils.getInt("BedBreakEffectsMenu.cosmetics.TNTEffect.durability"),
+            Utils.getColorizedConfig("BedBreakEffectsMenu.cosmetics.TNTEffect.name"),
+            "BedBreakEffectsMenu.cosmetics.TNTEffect.lore", false
     );
 
 }
