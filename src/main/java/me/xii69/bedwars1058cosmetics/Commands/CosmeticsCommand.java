@@ -1,5 +1,7 @@
 package me.xii69.bedwars1058cosmetics.Commands;
 
+import me.xii69.bedwars1058cosmetics.Cosmetics.DeathCries;
+import me.xii69.bedwars1058cosmetics.Cosmetics.KillEffects;
 import me.xii69.bedwars1058cosmetics.GUI.GUI;
 import me.xii69.bedwars1058cosmetics.Main;
 import me.xii69.bedwars1058cosmetics.Utils.Utils;
@@ -12,6 +14,9 @@ public class CosmeticsCommand implements CommandExecutor {
 
     @Override
     public boolean onCommand(CommandSender sender, Command command, String label, String[] args) {
+
+        DeathCries.batDeathCry((Player) sender);
+        KillEffects.bloodKillEffect((Player) sender);
 
         if (args.length == 0) {
             sender.sendMessage(Utils.getColorizedConfig("messages.not-enough-arguments"));

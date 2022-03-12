@@ -60,21 +60,49 @@ CosmeticsMenu:
       durability: 15
       lore:
         - ""
+    deathCries:
+      name: "&6Death Cries"
+      item: BLAZE_POWDER
+      durability: 0
+      slot: 20
+      lore:
+        - "&7Click for open death cries menu"
+    killEffects:
+      name: "&aKill Effects"
+      item: IRON_SWORD
+      durability: 0
+      slot: 22
+      lore:
+        - "&7Click for open kill effects menu"
     bedBreakEffects:
       name: "&bBed Break Effects"
       item: BED
       durability: 0
-      slot: 21
+      slot: 24
       lore:
         - "&7Click for open bed break effects menu"
-    deathCries:
-      name: "&6Death cries"
-      item: BLAZE_POWDER
-      durability: 0
-      slot: 23
-      lore:
-        - "&7Click for open death cries menu"
 
+DeathCriesMenu:
+  title: "&6Death Cries"
+  cosmetics:
+    BatCry:
+      enabled: true
+      name: "&8Bat &6Cry"
+      slot: 22
+      lore:
+        - "&7Right click for preview of sound"
+
+KillEffectsMenu:
+  title: "&aKill Effects"
+  cosmetics:
+    BloodKillEffect:
+      enabled: true
+      name: "&cBlood &aEffect"
+      item: REDSTONE
+      durability: 0
+      slot: 22
+      lore:
+        - "&7Right click for preview of sound"
 
 BedBreakEffectsMenu:
   title: "&bBed Break Effects"
@@ -84,18 +112,6 @@ BedBreakEffectsMenu:
       name: "&cTNT Explosion &bEffect"
       item: TNT
       durability: 0
-      slot: 1
+      slot: 22
       lore:
         - "&7Right click for preview of effect"
-
-DeathCriesMenu:
-  title: "&6Death Cries"
-  cosmetics:
-    BatCry:
-      enabled: true
-      name: "&8Bat &6Cry"
-      item: SPAWN_EGG
-      durability: 0
-      slot: 1
-      lore:
-        - "&7Right click for preview of sound"

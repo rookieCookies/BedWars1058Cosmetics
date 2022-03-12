@@ -2,6 +2,7 @@ package me.xii69.bedwars1058cosmetics.GUI;
 
 import me.xii69.bedwars1058cosmetics.Utils.ItemBuilder;
 import me.xii69.bedwars1058cosmetics.Utils.Utils;
+import org.bukkit.entity.EntityType;
 import org.bukkit.inventory.ItemStack;
 
 public class Items {
@@ -38,6 +39,24 @@ public class Items {
             Utils.getInt("CosmeticsMenu.items.deathCries.durability"),
             Utils.getColorizedConfig("CosmeticsMenu.items.deathCries.name"),
             "CosmeticsMenu.items.deathCries.lore", false
+    );
+    public static ItemStack batCryItem = ItemBuilder.createEggItem(
+            Utils.getColorizedConfig("DeathCriesMenu.cosmetics.BatCry.name"),
+            EntityType.BAT, "DeathCriesMenu.cosmetics.BatCry.lore", false
+    );
+
+    // Cosmetics KillEffects menu items
+    public static ItemStack killEffectsItem = ItemBuilder.createItem(
+            Utils.getColorizedConfig("CosmeticsMenu.items.killEffects.item"),
+            Utils.getInt("CosmeticsMenu.items.killEffects.durability"),
+            Utils.getColorizedConfig("CosmeticsMenu.items.killEffects.name"),
+            "CosmeticsMenu.items.killEffects.lore", false
+    );
+    public static ItemStack bloodKillEffectItem = ItemBuilder.createItem(
+            Utils.getColorizedConfig("KillEffectsMenu.cosmetics.BloodKillEffect.item"),
+            Utils.getInt("KillEffectsMenu.cosmetics.BloodKillEffect.durability"),
+            Utils.getColorizedConfig("KillEffectsMenu.cosmetics.BloodKillEffect.name"),
+            "KillEffectsMenu.cosmetics.BloodKillEffect.lore", false
     );
 
     // Cosmetics BedBreakEffects menu items

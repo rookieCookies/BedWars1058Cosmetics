@@ -12,11 +12,7 @@ public class InventoryClickListener implements Listener {
     @EventHandler
     public void onClick(InventoryClickEvent event) {
 
-        if (!(event.getWhoClicked() instanceof Player)) {
-            return;
-        }
-
-        if (!(event.getWhoClicked() instanceof Player)) {
+        if (event.getClickedInventory().getTitle().equalsIgnoreCase("container.inventory")) {
             return;
         }
 
@@ -31,6 +27,9 @@ public class InventoryClickListener implements Listener {
             if (event.getCurrentItem().equals(Items.deathCriesItem)) {
                 player.closeInventory();
                 GUI.openDeathCriesMenu(player);
+            } else if (event.getCurrentItem().equals(Items.killEffectsItem)) {
+                player.closeInventory();
+                GUI.openKillEffectsMenu(player);
             } else if (event.getCurrentItem().equals(Items.bedBreakEffectsItem)) {
                 player.closeInventory();
                 GUI.openBedBreakEffectsMenu(player);
@@ -40,6 +39,14 @@ public class InventoryClickListener implements Listener {
         }
 
         if (event.getClickedInventory().getName().equals(GUI.getDeathCriesMenu().getTitle())) {
+            event.setCancelled(true);
+            if (event.getCurrentItem().equals(Items.backItem)) {
+                player.closeInventory();
+                GUI.openMainMenu(player);
+            }
+        }
+
+        if (event.getClickedInventory().getName().equals(GUI.getKillEffectsMenu().getTitle())) {
             event.setCancelled(true);
             if (event.getCurrentItem().equals(Items.backItem)) {
                 player.closeInventory();
