@@ -8,15 +8,15 @@ import org.bukkit.inventory.Inventory;
 
 public class GUI {
 
-    static Inventory cosmeticsMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("CosmeticsMenu.title"));
-    static Inventory deathCriesMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("DeathCriesMenu.title"));
-    static Inventory killEffectsMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("KillEffectsMenu.title"));
-    static Inventory bedBreakEffectsMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("BedBreakEffectsMenu.title"));
+    private static final static Inventory cosmeticsMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("CosmeticsMenu.title"));
+    private static final static Inventory deathCriesMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("DeathCriesMenu.title"));
+    private static final static Inventory killEffectsMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("KillEffectsMenu.title"));
+    private static final static Inventory bedBreakEffectsMenu = Bukkit.createInventory(null, 45, Utils.getColorizedConfig("BedBreakEffectsMenu.title"));
+    private static final int[] glasses = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44};
 
     public static void setupGUIs() {
 
         // Main GUI
-        int[] glasses = {0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 17, 18, 26, 27, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44};
         cosmeticsMenu.setItem(Utils.getInt("CosmeticsMenu.items.deathCries.slot"), Items.deathCriesItem);
         cosmeticsMenu.setItem(Utils.getInt("CosmeticsMenu.items.killEffects.slot"), Items.killEffectsItem);
         cosmeticsMenu.setItem(Utils.getInt("CosmeticsMenu.items.bedBreakEffects.slot"), Items.bedBreakEffectsItem);
